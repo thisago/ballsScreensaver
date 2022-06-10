@@ -2,7 +2,7 @@
 
 Random balls floating around
 
-It's a screensaver, not CPU saver :)
+It's a screensaver, not CPUsaver :)
 
 ![](images/screenshot.png)
 
