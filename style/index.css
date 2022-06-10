@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  outline: none;
+}
+
+body {
+  height: 100vh;
+}
+
+div.bg {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-image: radial-gradient(circle, #137ab6 40%, #427bd5 52%, #37dbff 68%);
+  background-repeat: no-repeat;
+  background-size: 100% 300%;
+}
+div.bg span.ball {
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  left: var(--x);
+  top: var(--y);
+  border-radius: 50%;
+  -webkit-animation: scaleUp 1s forwards, color 5s alternate infinite ease-in-out;
+          animation: scaleUp 1s forwards, color 5s alternate infinite ease-in-out;
+  transition: all 0.5s;
+}
+div.bg span.ball.shadow {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1), inset 20px -20px 40px rgba(255, 255, 255, 0.3), inset -20px 20px 40px rgba(0, 0, 0, 0.2);
+}
+div.bg span.ball.transparent {
+  background-color: initial;
+}
+div.bg span.ball:hover {
+  background-color: transparent;
+}
+@-webkit-keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes scaleUp {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes color {
+  0% {
+    background-color: transparent;
+  }
+  90%, 100% {
+    background-color: var(--color);
+  }
+}
+@keyframes color {
+  0% {
+    background-color: transparent;
+  }
+  90%, 100% {
+    background-color: var(--color);
+  }
+}
